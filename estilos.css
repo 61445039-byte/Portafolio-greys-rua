@@ -1,0 +1,507 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+body {
+    background-color: #f5f8ff;
+    color: #1b1a19;
+    line-height: 1.6;
+}
+
+
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    min-height: 300px;
+
+    background:
+        linear-gradient(
+            rgba(80, 150, 220, 0.15),
+            rgba(80, 150, 220, 0.15)
+        ),
+        url("./imagenes/fondo-invierno.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+
+    padding: 25px 0;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+/* ================================
+   FOTO
+================================ */
+
+.contenedorFoto {
+    width: 85px;
+    height: 85px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    border: 3px solid white;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.25);
+
+    margin-bottom: 7px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: white;
+}
+
+.foto {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* ================================
+   PERFIL
+================================ */
+
+.perfil {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+
+.profile-info h1 {
+    font-size: 1.6rem;
+
+    margin-bottom: 3px;
+
+    color: white;
+
+    text-shadow:
+        0 2px 4px rgba(0,0,0,0.25);
+}
+
+
+.profile-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    font-size: 0.8rem;
+
+    opacity: 1;
+
+    color: #eaf6ff;
+}
+
+
+/* ================================
+   SECCIONES
+================================ */
+
+section {
+    padding: 25px 0;
+}
+
+
+h2 {
+    text-align: center;
+
+    margin-bottom: 18px;
+
+    color: #244f7f;
+
+    font-size: 1.25rem;
+
+    position: relative;
+}
+
+
+/* Línea debajo de los títulos */
+
+h2::after {
+    content: '';
+
+    display: block;
+
+    width: 45px;
+
+    height: 2px;
+
+    background: #4c91d8;
+
+    margin: 7px auto;
+
+    border-radius: 10px;
+}
+
+/* ================================
+   SOBRE MÍ
+================================ */
+
+#sobre-mi {
+    background-color: white;
+}
+
+
+#sobre-mi p {
+    max-width: 900px;
+
+    margin: 0 auto 20px auto;
+
+    color: #444;
+
+    font-size: 1.05rem;
+}
+
+
+/* ================================
+   PROYECTOS
+================================ */
+
+#proyectos {
+    background-color: #f5f8ff;
+}
+
+
+.proyectos-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(300px, 1fr)
+        );
+
+    gap: 25px;
+}
+
+
+.proyecto {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.proyecto:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+.proyecto h3 {
+    color: #2c3e50;
+
+    margin-bottom: 15px;
+
+    font-size: 1.4rem;
+}
+
+
+.proyecto p {
+    color: #555;
+}
+
+
+/* ================================
+   HABILIDADES
+================================ */
+
+#habilidades {
+    background:
+        linear-gradient(
+            rgba(190, 225, 250, 0.82),
+            rgba(215, 237, 255, 0.88)
+        ),
+        url("./imagenes/fondo-invierno.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    position: relative;
+}
+
+
+.habilidades-lista {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.habilidad {
+    background: #4d91d8;
+
+    color: white;
+
+    padding: 6px 13px;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    font-size: 0.65rem;
+
+    box-shadow:
+        0 3px 8px rgba(40,100,170,0.2);
+
+    transition: 0.3s;
+}
+
+.habilidad:hover {
+    transform: translateY(-3px);
+
+    background: #2c3e50;
+}
+
+
+/* ================================
+   CONTACTO
+================================ */
+
+#contacto {
+    background-color: white;
+}
+
+
+form {
+    max-width: 450px;
+
+    margin: 15px auto 0;
+}
+
+.form-group {
+    margin-bottom: 7px;
+}
+
+input,
+textarea {
+    width: 100%;
+
+    padding: 7px 9px;
+
+    border: 1px solid #c9e0f2;
+
+    border-radius: 5px;
+
+    font-size: 0.65rem;
+
+    background: white;
+}
+
+
+input:focus,
+textarea:focus {
+    outline: none;
+
+    border-color: #3498db;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(52, 152, 219, 0.2);
+}
+
+
+textarea {
+    resize: vertical;
+}
+
+
+/* ================================
+   BOTÓN
+================================ */
+
+button {
+    background: #07519b;
+
+    color: white;
+
+    border: none;
+
+    padding: 7px 16px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    font-size: 0.65rem;
+
+    display: block;
+
+    margin: 8px auto 0;
+}
+
+button:hover {
+    background: #3498db;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   PIE DE PÁGINA
+================================ */
+
+footer {
+    min-height: 110px;
+
+    background:
+        linear-gradient(
+            rgba(8, 40, 78, 0.92),
+            rgba(8, 40, 78, 0.92)
+        ),
+        url("./imagenes/fondo-footer.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 18px 0;
+
+    margin-top: 0;
+}
+
+
+.enlaces {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin: 8px 0 10px;
+}
+
+.enlaces a {
+    color: white;
+
+    font-size: 0.9rem;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.enlaces a:hover {
+    color: #3498db;
+}
+
+
+@media (max-width: 768px) {
+
+    .profile-info h1 {
+        font-size: 2rem;
+    }
+
+
+    .contenedorFoto {
+        width: 150px;
+        height: 150px;
+    }
+
+
+    section {
+        padding: 40px 0;
+    }
+
+
+    .proyectos-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+.nieve {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    z-index: 100;
+
+    background-image:
+        radial-gradient(
+            white 1px,
+            transparent 1px
+        ),
+        radial-gradient(
+            white 1.5px,
+            transparent 1.5px
+        );
+
+    background-size:
+        70px 70px,
+        120px 120px;
+
+    animation: nevar 12s linear infinite;
+
+    opacity: 0.5;
+}
+
+@keyframes nevar {
+
+    from {
+        background-position:
+            0 0,
+            0 0;
+    }
+
+    to {
+        background-position:
+            0 700px,
+            100px 700px;
+    }
+}
